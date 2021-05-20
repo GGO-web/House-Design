@@ -1,0 +1,27 @@
+.logo {
+   display: inline-block;
+   vertical-align: middle;
+   padding: 10px 7px;
+   width: 80px;
+   height: 80px;
+   font-weight: 700;
+   font-size: 48px;
+   line-height: 125%;
+   text-align: center;
+   color: var(--color-white);
+   background-color: var(--color-primary);
+
+   &::before {
+      content: "ID";
+   }
+}
+
+// arrow-right styles
+.arrow {
+   display: inline-block;
+   border-top: 8px solid transparent;
+   border-bottom: 8px solid transparent;
+   border-left: 16px solid var(--color-green);
+   width: 0;
+   height: 0;
+}

@@ -1,0 +1,105 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+nav, footer, header, aside {
+   display: block;
+}
+
+input, button, textarea {
+   font-family: inherit;
+}
+
+input {
+   border: none;
+   line-height: inherit;
+}
+
+img {
+   vertical-align: middle;
+   max-width: 100%;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+input::placeholder {
+   color: inherit;
+   background-color: inherit;
+}
+
+ul, ol {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+polyline, svg path {
+   fill: inherit;
+   stroke: inherit;
+}
+
+address {
+   font-style: normal;
+}
+
+.btn-reset {
+   border: none;
+   background: transparent;
+   cursor: pointer;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+   outline: none;
+}
+
+.site-container {
+   overflow: hidden;
+}
+
+.is-hidden {
+   display: none !important;
+}
+
+.hide-scroll {
+   overflow: hidden;
+}
+
+.visually-hidden {
+   position: absolute;
+   overflow: hidden;
+   margin: -1px;
+   border: none;
+   padding: 0;
+   width: 1px;
+   height: 1px;
+   clip: rect(0 0 0 0);
+}
+
+body {
+   position: relative;
+   margin: 0;
+   height: 100%;
+   font-family: "Libre Baskerville", serif;
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 160%;
+   color: #000;
+   background-color: #fff;
+}
+
+.container {
+   --content-offset: 20px;
+
+   margin: 0 auto;
+   padding: 0 var(--content-offset);
+   max-width: calc(1368px + 2 * var(--content-offset));
+}

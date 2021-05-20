@@ -1,0 +1,29 @@
+@mixin desktop {
+   @media (min-width: (1025px)) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media (max-width: (1024px)) {
+      @content;
+   }
+}
+
+@mixin mobileL {
+   @media (max-width: (768px)) {
+      @content;
+   }
+}
+
+@mixin mobileM {
+   @media (max-width: (576px)) {
+      @content;
+   }
+}
+
+@mixin media($breakpoint, $type: max-width) {
+   @media (#{$type}: $breakpoint) {
+      @content;
+   }
+}
