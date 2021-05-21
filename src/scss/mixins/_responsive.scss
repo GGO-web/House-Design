@@ -1,18 +1,20 @@
 // ==!> Responsive parameter <!==
-@mixin responsive-parameter($parameter, $pcSize, $mobSize, $maxSize, $minSize) {
+@mixin responsive($parameter, $pcSize, $mobSize, $maxSize, $minSize) {
    $addSize: $pcSize - $mobSize;
    $maxWidth: $maxSize - $minSize;
-   // змінюємо параметр в інтервалі від $minSize до $maxSize
 
-   // залишаєм десктопний параметер на ширині більше $maxSize
-   @media (min-width: #{$maxSize + px}){
+   // leave the desktop parameter at a width greater than $maxSize
+   @media (min-width: #{$maxSize + px}) {
       #{$parameter}: #{$pcSize + px};
    }
-   @media (max-width: #{$maxSize + px}) and (min-width: #{$minSize + px}){
+
+   // change the parameter in the range from $minSize to $maxSize
+   @media (max-width: #{$maxSize + px}) and (min-width: #{$minSize + px}) {
       #{$parameter}: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minSize + px}) / #{$maxWidth}));
    }
-   // залишаєм мобільний параметер на ширині менше $minSize
-   @media (max-width: #{$minSize + px}){
+
+   // leave the mobile parameter at a width less than $minSize
+   @media (max-width: #{$minSize + px}) {
       #{$parameter}: #{$mobSize + px};
    }
 }

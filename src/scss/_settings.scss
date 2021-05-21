@@ -97,9 +97,13 @@ body {
 }
 
 .container {
-   --content-offset: 20px;
+   --content-offset: 40px;
 
    margin: 0 auto;
    padding: 0 var(--content-offset);
-   max-width: calc(1368px + 2 * var(--content-offset));
+   max-width: calc(1110px + 2 * var(--content-offset));
+
+   @include tablet {
+      --content-offset: 20px;
+   }
 }

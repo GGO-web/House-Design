@@ -2,27 +2,30 @@
 <html lang="ru">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="Description" content="Site template">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="./img/favicon.png" type="image/png">
-	<!-- ==/> Preload fonts Start! </==-->
-	<link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin>
-	<!-- ==/> Preload fonts End! </==-->
-	<title>House Design</title>
-	<link rel="stylesheet" href="css/vendor.min.css">
-	<link rel="stylesheet" href="css/style.min.css">
+   <meta charset="UTF-8">
+   <meta name="Description" content="Наша компания создаёт интерьер мечты, где вам будет приятно проводить время!">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>House Design</title>
+
+   <!-- include font -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet">
+
+   <!-- includes styles -->
+   <link rel="stylesheet" href="css/vendor.min.css">
+   <link rel="stylesheet" href="css/style.min.css">
+
+   <!-- includes scripts -->
+   <script src="js/vendor.min.js" defer></script>
+   <script src="js/script.min.js" defer></script>
 </head>
 
 <body>
-	<div class="site-container">
-		@include('parts/header.html')
-		@include('parts/footer.html')
-	</div>
-
-	<script src="js/vendor.min.js" defer></script>
-	<script src="js/script.min.js" defer></script>
+   <div class="site-container">
+      @include('parts/header.html')
+      @include('parts/footer.html')
+   </div>
 </body>
 
 </html>

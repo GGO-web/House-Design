@@ -61,17 +61,21 @@ const scripts = () => {
       .pipe(concat("vendor.js"))
       .pipe(gulpif(buildReady, uglify().on("error", notify.onError())))
       .pipe(dest("./app/js/"));
-   return src(["./src/js/components/**.js", "./src/js/script.js"])
-      .pipe(gulpif(!buildReady, sourcemaps.init()))
+
+   src(["./src/js/components/**.js", "./src/js/script.js"])
       .pipe(concat("script.js"))
-      .pipe(gulpif(!buildReady, sourcemaps.write(".")))
-      .pipe(dest("./app/js"))
-      .pipe(uglify().on("error", notify.onError()))
+      .pipe(uglify())
       .pipe(
          rename({
             extname: ".min.js",
          })
       )
+      .pipe(dest("./app/js"));
+
+   return src(["./src/js/components/**.js", "./src/js/script.js"])
+      .pipe(gulpif(!buildReady, sourcemaps.init()))
+      .pipe(concat("script.js"))
+      .pipe(gulpif(!buildReady, sourcemaps.write(".")))
       .pipe(dest("./app/js"))
       .pipe(browserSync.stream());
 };

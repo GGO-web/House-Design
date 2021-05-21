@@ -6,3 +6,20 @@
    color: var(--color-white);
    background-color: var(--color-green);
 }
+
+.burger {
+   --burger-width: 20px;
+   --burger-height: 14px;
+   --burger-color: var(--color-black);
+   --burger-line-height: 2px;
+
+   @include burger;
+
+   @include mobileL {
+      margin-left: 20px;
+   }
+
+   @media (min-width: 769px) {
+      display: none;
+   }
+}

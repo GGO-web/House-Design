@@ -21,9 +21,3 @@
       @content;
    }
 }
-
-@mixin media($breakpoint, $type: max-width) {
-   @media (#{$type}: $breakpoint) {
-      @content;
-   }
-}
