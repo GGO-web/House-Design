@@ -71,6 +71,7 @@ address {
 
 .hide-scroll {
    overflow: hidden;
+   padding-right: var(--scrollbar-width);
 }
 
 .visually-hidden {

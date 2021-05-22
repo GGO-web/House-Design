@@ -1,8 +1,6 @@
 .list {
    display: flex;
    align-items: center;
-   border-radius: 0 0 50px 50px;
-   background-color: var(--color-white);
 
    &__item {
       text-align: center;

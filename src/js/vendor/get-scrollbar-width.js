@@ -18,7 +18,7 @@ function getScrollbarWidth() {
 
 // create a css variable(--scrollbar-width) to get the width of the scrollbar
 const scrollbarWidth = getScrollbarWidth();
-document.querySelector(".site-container").style.setProperty(
+document.body.style.setProperty(
    "--scrollbar-width",
    scrollbarWidth + "px",
 );

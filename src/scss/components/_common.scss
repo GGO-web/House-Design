@@ -5,7 +5,7 @@
 
 // ==!> Most Common styles <!==
 .phone {
-   @include responsive(font-size, 20, 16, 768, 320);
+   @include responsive(font-size, $font-small, $font-xx-small, 768px, 320px);
 
    font-weight: 700;
    line-height: 30 / 20 * 100%;
@@ -19,6 +19,24 @@
    &:hover {
       text-decoration-color: var(--color-black);
    }
+}
+
+.title {
+   @include responsive(font-size, $font-large, $font-middle, 1024px, 320px);
+
+   margin: 0;
+   font-weight: 700;
+   line-height: 125%;
+
+   &--small {
+      @include responsive(font-size, $font-middle, $font-x-small, 1024px, 320px);
+   }
+}
+
+.text {
+   @include responsive(font-size, $font-x-small, $font-xx-small, 1024px, 320px);
+
+   margin: 0;
 }
 
 // ==!> Most Common styles <!==

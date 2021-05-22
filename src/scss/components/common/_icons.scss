@@ -1,6 +1,6 @@
 .logo {
-   @include responsive(font-size, 48, 24, 768, 320);
-   @include responsive(width, 80, 50, 768, 320);
+   @include responsive(font-size, $font-x-large, $font-middle, 768px, 320px);
+   @include responsive(width, 80px, 50px, 768px, 320px);
 
    display: flex;
    align-items: center;

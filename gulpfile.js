@@ -59,7 +59,12 @@ const styles = () => {
 const scripts = () => {
    src("./src/js/vendor/**.js")
       .pipe(concat("vendor.js"))
-      .pipe(gulpif(buildReady, uglify().on("error", notify.onError())))
+      .pipe(uglify().on("error", notify.onError()))
+      .pipe(
+         rename({
+            extname: ".min.js",
+         })
+      )
       .pipe(dest("./app/js/"));
 
    src(["./src/js/components/**.js", "./src/js/script.js"])
