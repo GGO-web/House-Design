@@ -27,9 +27,12 @@
    margin: 0;
    font-weight: 700;
    line-height: 125%;
+   text-align: center;
 
    &--small {
       @include responsive(font-size, $font-middle, $font-x-small, 1024px, 320px);
+
+      text-align: left;
    }
 }
 
@@ -37,6 +40,7 @@
    @include responsive(font-size, $font-x-small, $font-xx-small, 1024px, 320px);
 
    margin: 0;
+   text-align: justify;
 }
 
 // ==!> Most Common styles <!==

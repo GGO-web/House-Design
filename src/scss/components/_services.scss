@@ -1,0 +1,73 @@
+.services {
+   &__title {
+      @include responsive(margin-bottom, $offset-x-middle, $offset-middle, 1024px, 320px);
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(even) {
+         flex-direction: row-reverse;
+      }
+   }
+
+   &__item-img {
+      flex: 0 1 50%;
+      height: 100%;
+      max-width: 50%;
+      object-fit: cover;
+   }
+
+   &__item-content {
+      flex: 0 1 50%;
+      margin: 0 auto;
+      padding: $offset-x-small;
+      max-width: 440px;
+   }
+
+   &__item-title {
+      text-transform: uppercase;
+   }
+
+   &__item-text {
+      @include responsive(margin-top, $offset-x-small, $offset-xx-small, 768px, 320px);
+   }
+
+   &__item-button {
+      @include responsive(margin-top, $offset-x-small, $offset-xx-small, 768px, 320px);
+   }
+
+   @media (max-width: 880px) {
+      &__item {
+         flex-direction: column;
+
+         &:nth-child(even) {
+            flex-direction: column;
+         }
+      }
+
+      &__item-img {
+         @include responsive(max-height, 280px, 180px, 880px, 320px);
+
+         width: 90%;
+      }
+
+      &__item-content {
+         padding: $offset-small 0;
+      }
+
+      &__item-title {
+         text-align: center;
+      }
+
+      &__button {
+         text-align: center;
+      }
+
+      &__item-img, &__item-content {
+         flex: 0 1 100%;
+         max-width: 90%;
+      }
+   }
+}
