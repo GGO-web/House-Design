@@ -29,9 +29,13 @@
       line-height: 1;
    }
 
+   &--background-active {
+      background-color: #fff;
+   }
+
    @include mobileL {
-      &._background-active {
-         background-color: #fff;
+      &--offset {
+         padding-right: var(--scrollbar-width);
       }
 
       &__nav {
@@ -47,7 +51,8 @@
          transition: top 0.4s ease;
 
          &.is-active {
-            top: 80px;
+            top: $header-height;
+            padding-right: var(--scrollbar-width);
          }
       }
 
@@ -88,5 +93,12 @@
             background-color: var(--color-gray);
          }
       }
+   }
+}
+
+@include mobileL {
+   body.hide-scroll {
+      overflow: hidden;
+      padding-right: var(--scrollbar-width);
    }
 }

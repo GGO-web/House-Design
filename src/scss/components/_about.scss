@@ -1,0 +1,17 @@
+.about {
+   &__container {
+      @include responsive(padding-top, $offset-large, $offset-x-middle, 768px, 320px);
+      @include responsive(padding-bottom, $offset-large, $offset-x-middle, 768px, 320px);
+
+      max-width: calc(967px + 2 * var(--content-offset));
+      text-align: center;
+   }
+
+   &__text {
+      @include responsive(margin-top, $offset-small, $offset-x-small, 768px, 320px);
+   }
+
+   &__button {
+      @include responsive(margin-top, $offset-x-small, $offset-xx-small, 768px, 320px);
+   }
+}

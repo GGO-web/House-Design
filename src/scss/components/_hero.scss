@@ -1,8 +1,8 @@
 .hero {
    @include eclipse(#fff, 0.4);
 
-   height: 100vh;
-   min-height: 520px;
+   padding: $offset-small 0;
+   min-height: 100vh;
    color: var(--color-primary);
    background-image: url("../img/main-bg.jpg");
    background-position: center;
@@ -11,7 +11,7 @@
    background-color: var(--color-white);
 
    &__inner {
-      @include responsive(padding-top, 200px, 120px, 768px, 320px);
+      @include responsive(padding-top, 200px, 150px, 768px, 320px);
    }
 
    &__title {
@@ -21,12 +21,12 @@
    &__text {
       @include responsive(font-size, $font-middle, $font-small, 1024px, 320px);
 
-      margin-top: 20px;
+      margin-top: $offset-small;
       max-width: 450px;
       font-style: italic;
    }
 
    &__button {
-      margin-top: 40px;
+      margin-top: $offset-x-small;
    }
 }

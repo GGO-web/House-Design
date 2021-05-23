@@ -48,3 +48,23 @@
       display: none;
    }
 }
+
+.more-button {
+   font-size: $font-xx-small;
+
+   &__arrow {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+   }
+
+   &__text {
+      text-decoration: underline;
+      color: var(--color-green);
+      transition: text-decoration 0.1s ease-in-out;
+   }
+
+   &:hover &__text {
+      text-decoration-color: transparent;
+   }
+}
