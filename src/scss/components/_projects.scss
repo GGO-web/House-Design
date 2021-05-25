@@ -1,0 +1,51 @@
+.projects {
+   $gallery-item-offset: 15px;
+
+   @include mobileM {
+      $gallery-item-offset: 10px;
+   }
+
+   &__inner {
+      text-align: center;
+
+      @include responsive(padding-top, $offset-large, $offset-x-middle, 1024px, 320px);
+      @include responsive(padding-bottom, $offset-large, $offset-x-middle, 1024px, 320px);
+   }
+
+   &__title {
+      @include responsive(margin-bottom, $offset-x-middle, $offset-middle, 1024px, 320px);
+   }
+
+   &__gallery {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -$gallery-item-offset;
+   }
+
+   &__gallery-item {
+      flex: 0 1 33.333%;
+      padding: $gallery-item-offset;
+
+      @include mobileL {
+         flex: 0 1 50%;
+      }
+   }
+
+   &__gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      &-wrapper {
+         display: inline-block;
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   @media (max-width: 480px) {
+      &__gallery-item {
+         flex: 0 1 100%;
+      }
+   }
+}

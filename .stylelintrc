@@ -8,12 +8,12 @@
 		"order/order": [
 			"custom-properties",
 			"dollar-variables",
+			"declarations",
 			{
 				"type": "at-rule",
 				"name": "include",
 				"hasBlock": false
 			},
-			"declarations",
 			{
 				"type": "rule",
 				"selector": "&::before"
@@ -62,6 +62,10 @@
 			{
 				"type": "rule",
 				"selector": "&\\[[^\\[\\]]+\\]"
+			},
+			{
+				"type": "rule",
+				"selector": "&\\..+"
 			},
 			{
 				"type": "rule",

@@ -1,0 +1,59 @@
+.blog {
+   $blog-item-offset: 15px;
+
+   &__inner {
+      text-align: center;
+
+      @include responsive(padding-top, $offset-large, $offset-x-middle, 1024px, 320px);
+      @include responsive(padding-bottom, $offset-large, $offset-x-middle, 1024px, 320px);
+   }
+
+   &__title {
+      text-align: center;
+
+      @include responsive(margin-bottom, $offset-x-middle, $offset-middle, 1024px, 320px);
+   }
+
+   &__posts {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -$blog-item-offset;
+      text-align: left;
+   }
+
+   &__post {
+      flex: 0 1 50%;
+      padding: $blog-item-offset;
+   }
+
+   &__post-img {
+      width: 100%;
+      object-fit: cover;
+   }
+
+   &__post-title {
+      margin-top: $offset-small;
+   }
+
+   &__post-text {
+      margin-top: $offset-xx-small;
+   }
+
+   &__button {
+      @include responsive(margin-top, $offset-middle, $offset-small, 1024px, 320px);
+   }
+
+   @include mobileM {
+      &__post {
+         flex: 0 1 100%;
+      }
+
+      &__post-img {
+         @include responsive(max-height, 280px, 180px, 576px, 320px);
+      }
+
+      &__post-text {
+         line-height: 125%;
+      }
+   }
+}

@@ -1,9 +1,8 @@
 .button {
-   @include responsive(font-size, $font-small, $font-x-small, 1024px, 320px);
-
    position: relative;
    overflow: hidden;
    padding: 15px 40px;
+   font-size: $font-xx-small;
    line-height: 1.25;
    text-align: center;
    color: var(--color-white);

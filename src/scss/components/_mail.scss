@@ -1,0 +1,44 @@
+.mail {
+   &__inner {
+      text-align: center;
+
+      @include responsive(padding-top, $offset-x-middle, $offset-small, 1024px, 320px);
+      @include responsive(padding-bottom, $offset-x-middle, $offset-small, 1024px, 320px);
+   }
+
+   &__title {
+      @include responsive(margin-bottom, $offset-x-middle, $offset-small, 1024px, 320px);
+   }
+
+   &__form {
+      display: grid;
+      justify-content: center;
+      grid-gap: $offset-small;
+      grid-template-columns: repeat(3, minmax(140px, 250px));
+   }
+
+   @include mobileL {
+      &__form {
+         grid-gap: $offset-x-small;
+         grid-template-columns: repeat(2, minmax(140px, 250px));
+      }
+
+      &__form-button {
+         grid-column: 2 span;
+         grid-row: 2;
+      }
+   }
+
+   @media (max-width: 420px) {
+      &__form {
+         grid-auto-rows: auto;
+         grid-template-columns: 1fr;
+         grid-template-rows: repeat(3, 1fr);
+      }
+
+      &__form-button {
+         grid-column: unset;
+         grid-row: unset;
+      }
+   }
+}

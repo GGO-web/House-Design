@@ -35,11 +35,11 @@
       background-color: #fff;
    }
 
-   @include mobileL {
-      &--offset {
-         padding-right: var(--scrollbar-width);
-      }
+   &--offset {
+      padding-right: var(--scrollbar-width);
+   }
 
+   @include mobileL {
       &__nav {
          position: fixed;
          left: 0;
