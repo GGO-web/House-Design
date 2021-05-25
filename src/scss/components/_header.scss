@@ -31,6 +31,18 @@
       line-height: 1;
    }
 
+   &__list-link {
+      border: 1px solid transparent;
+      transition:
+         border-color 0.1s ease-in-out,
+         background-color 0.1s ease-in-out,
+         text-decoration 0.1s ease-in-out;
+
+      &:hover, &--active {
+         text-decoration: 2px underline var(--color-black);
+      }
+   }
+
    &--background-active {
       background-color: #fff;
    }
@@ -79,20 +91,14 @@
       }
 
       &__list-link {
-         border: 1px solid transparent;
          padding: 10px;
          width: 70%;
          min-width: 280px;
          font-size: $font-middle;
-         transition:
-            border-color 0.1s ease-in-out,
-            background-color 0.1s ease-in-out;
 
          &:hover {
             border: 1px solid #8d99ae;
             border-radius: 2px;
-            text-decoration: 2px underline transparent;
-            background-color: var(--color-gray);
          }
       }
    }
