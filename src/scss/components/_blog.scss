@@ -28,6 +28,8 @@
 
    &__post-img {
       width: 100%;
+      height: 40vw;
+      max-height: 500px;
       object-fit: cover;
    }
 
@@ -49,7 +51,7 @@
       }
 
       &__post-img {
-         @include responsive(max-height, 280px, 180px, 576px, 320px);
+         @include responsive(max-height, 320px, 180px, 576px, 320px);
       }
 
       &__post-text {

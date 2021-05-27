@@ -1,3 +1,6 @@
+@use "sass:list";
+@use "sass:string";
+
 .footer {
    text-align: center;
 
@@ -21,11 +24,20 @@
    }
 
    &__social-item {
+      $social-bg: (var(--color-red), #475993, #039be5, #dc4e41, linear-gradient(45deg, #fd5 0%, #ff543e 50%, #c837ab 100%), #007ab9);
+
       flex: 0 0 40px;
       border-radius: 100%;
       width: 40px;
       height: 40px;
       background-color: var(--color-primary);
+
+      @for $i from 1 through length($social-bg) {
+         $bg-color: nth($social-bg, $i);
+         &:hover:nth-child(#{$i}) {
+            background: nth($social-bg, $i);
+         }
+      }
    }
 
    &__social-link {
@@ -36,6 +48,8 @@
 
    &__social-icon {
       width: 50%;
+      color: var(--color-white);
+      transition: color 0.2s ease-in-out;
 
       @extend .footer__social-link;
    }

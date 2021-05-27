@@ -22,6 +22,7 @@
    &__item-img {
       flex: 0 1 50%;
       height: 100%;
+      min-height: 420px;
       max-width: 50%;
       object-fit: cover;
    }
@@ -55,9 +56,10 @@
       }
 
       &__item-img {
-         @include responsive(max-height, 280px, 180px, 880px, 320px);
-
          width: 100%;
+         min-height: 0;
+
+         @include responsive(max-height, 320px, 180px, 880px, 320px);
       }
 
       &__item-content {

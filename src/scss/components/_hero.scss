@@ -11,7 +11,8 @@
    background-color: var(--color-white);
 
    &__inner {
-      @include responsive(padding-top, 200px, 150px, 1024px, 320px);
+      @include responsive(padding-top, 200px, 120px, 1024px, 320px);
+      @include responsive(padding-bottom, 200px, 120px, 1024px, 320px);
    }
 
    &__title {
