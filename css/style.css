@@ -135,7 +135,6 @@ body {
   --burger-width: 20px;
   --burger-height: 14px;
   --burger-color: var(--color-black);
-  --burger-line-height: 2px;
   position: relative;
   width: var(--burger-width);
   height: var(--burger-height);
@@ -146,20 +145,20 @@ body {
     left: 0;
     border-radius: 10px;
     width: 100%;
-    height: var(--burger-line-height);
+    height: 2px;
     background-color: currentColor;
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out; }
   .burger::before {
     top: 0; }
   .burger::after {
-    top: calc(100% - var(--burger-line-height)); }
+    top: calc(100% - 2px); }
   .burger__line {
     position: absolute;
     left: 0;
     top: 50%;
     border-radius: 10px;
     width: 100%;
-    height: var(--burger-line-height);
+    height: 2px;
     background-color: currentColor;
     transform: translateY(-50%);
     transition: transform 0.3s ease-in-out; }
@@ -250,8 +249,8 @@ body {
     font-size: 18px;
     line-height: 125%;
     text-align: center;
-    -webkit-text-decoration: 2px underline transparent;
-    text-decoration: 2px underline transparent;
+    -webkit-text-decoration: underline solid transparent 2px;
+    text-decoration: underline solid transparent 2px;
     transition: -webkit-text-decoration-color 0.1s ease-in;
     transition: text-decoration-color 0.1s ease-in;
     transition: text-decoration-color 0.1s ease-in, -webkit-text-decoration-color 0.1s ease-in;
@@ -303,8 +302,8 @@ body {
       font-size: 16px; } }
 
 .--underline {
-  -webkit-text-decoration: 2px underline transparent;
-  text-decoration: 2px underline transparent;
+  -webkit-text-decoration: underline solid transparent 2px;
+  text-decoration: underline solid transparent 2px;
   transition: -webkit-text-decoration-color 0.1s ease-in;
   transition: text-decoration-color 0.1s ease-in;
   transition: text-decoration-color 0.1s ease-in, -webkit-text-decoration-color 0.1s ease-in;
@@ -858,8 +857,6 @@ body {
   .blog__post-text {
     line-height: 125%; } }
 
-@use "sass:list";
-@use "sass:string";
 .footer {
   text-align: center; }
   .footer__inner {
