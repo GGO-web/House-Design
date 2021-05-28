@@ -95,10 +95,16 @@
          width: 70%;
          min-width: 280px;
          font-size: $font-middle;
+         text-transform: uppercase;
+         transition: text-decoration-color 0s ease-in-out;
 
          &:hover {
             border: 1px solid #8d99ae;
             border-radius: 2px;
+         }
+
+         &.list__link:hover:not(.header__list-link--active) {
+            text-decoration: none;
          }
       }
    }
