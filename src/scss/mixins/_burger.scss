@@ -11,7 +11,7 @@
       left: 0;
       border-radius: 10px;
       width: 100%;
-      height: var(--burger-line-height);
+      height: 2px;
       background-color: currentColor;
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
    }
@@ -21,7 +21,7 @@
    }
 
    &::after {
-      top: calc(100% - var(--burger-line-height));
+      top: calc(100% - 2px);
    }
 
    &__line {
@@ -30,7 +30,7 @@
       top: 50%;
       border-radius: 10px;
       width: 100%;
-      height: var(--burger-line-height);
+      height: 2px;
       background-color: currentColor;
       transform: translateY(-50%);
       transition: transform 0.3s ease-in-out;
