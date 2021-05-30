@@ -105,6 +105,12 @@ body {
     .container {
       --content-offset: 20px; } }
 
+.js-validate-error-label {
+  position: absolute;
+  margin-left: 4px;
+  font-size: 16px;
+  text-align: left; }
+
 .button {
   position: relative;
   overflow: hidden;
@@ -269,16 +275,21 @@ body {
   color: var(--color-black);
   transition: border-color 0.1s ease-in-out; }
   .input::-moz-placeholder {
+    font-size: inherit;
     color: #d2d2d2;
     -moz-transition: color 0.1s ease-in-out;
     transition: color 0.1s ease-in-out; }
   .input:-ms-input-placeholder {
+    font-size: inherit;
     color: #d2d2d2;
     -ms-transition: color 0.1s ease-in-out;
     transition: color 0.1s ease-in-out; }
   .input::placeholder {
+    font-size: inherit;
     color: #d2d2d2;
     transition: color 0.1s ease-in-out; }
+  .input:valid {
+    border: 1px solid var(--color-green); }
   .input.focus-visible {
     border: 1px solid #bcbcbc; }
     .input.focus-visible::-moz-placeholder {
@@ -749,14 +760,13 @@ body {
 
 .mail__form {
   display: grid;
+  align-items: flex-start;
   justify-content: center;
   grid-gap: 32px;
   grid-template-columns: repeat(3, minmax(140px, 250px)); }
 
 .mail__form-input {
   border-radius: 5px; }
-  .mail__form-input:valid {
-    border: 2px solid var(--color-green); }
 
 @media (max-width: 768px) {
   .mail__form {
