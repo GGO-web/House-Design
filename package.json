@@ -1,7 +1,7 @@
 {
-  "name": "gulpfor",
+  "name": "housedesign",
   "version": "1.0.0",
-  "description": "gulp for web",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,5 +39,7 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.19.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "just-validate": "^1.5.0"
+  }
 }

@@ -12,6 +12,7 @@
 
    &__form {
       display: grid;
+      align-items: flex-start;
       justify-content: center;
       grid-gap: $offset-small;
       grid-template-columns: repeat(3, minmax(140px, 250px));
@@ -19,10 +20,6 @@
 
    &__form-input {
       border-radius: 5px;
-
-      &:valid {
-         border: 2px solid var(--color-green);
-      }
    }
 
    @include mobileL {

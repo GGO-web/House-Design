@@ -7,8 +7,13 @@
    transition: border-color 0.1s ease-in-out;
 
    &::placeholder {
+      font-size: inherit;
       color: #d2d2d2;
       transition: color 0.1s ease-in-out;
+   }
+
+   &:valid {
+      border: 1px solid var(--color-green);
    }
 
    &.focus-visible {
