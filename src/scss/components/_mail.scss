@@ -16,10 +16,18 @@
       justify-content: center;
       grid-gap: $offset-small;
       grid-template-columns: repeat(3, minmax(140px, 250px));
+
+      &-group .js-validate-error-label {
+         position: absolute;
+         margin-left: 4px;
+         font-size: $font-xx-small;
+         text-align: left;
+      }
    }
 
    &__form-input {
       border-radius: 5px;
+      width: 100%;
    }
 
    @include mobileL {
@@ -32,13 +40,16 @@
          grid-column: 2 span;
          grid-row: 2;
       }
+
+      .js-validate-error-label {
+         position: initial;
+      }
    }
 
-   @media (max-width: 420px) {
+   @include mobileM {
       &__form {
          grid-auto-rows: auto;
          grid-template-columns: 1fr;
-         grid-template-rows: repeat(3, 1fr);
       }
 
       &__form-button {
