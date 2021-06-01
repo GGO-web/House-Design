@@ -106,12 +106,6 @@ body {
     .container {
       --content-offset: 20px; } }
 
-.js-validate-error-label {
-  position: absolute;
-  margin-left: 4px;
-  font-size: 16px;
-  text-align: left; }
-
 .button {
   position: relative;
   overflow: hidden;
@@ -764,9 +758,15 @@ body {
   justify-content: center;
   grid-gap: 32px;
   grid-template-columns: repeat(3, minmax(140px, 250px)); }
+  .mail__form-group .js-validate-error-label {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 16px;
+    text-align: left; }
 
 .mail__form-input {
-  border-radius: 5px; }
+  border-radius: 5px;
+  width: 100%; }
 
 @media (max-width: 768px) {
   .mail__form {
@@ -774,13 +774,14 @@ body {
     grid-template-columns: repeat(2, minmax(140px, 250px)); }
   .mail__form-button {
     grid-column: 2 span;
-    grid-row: 2; } }
+    grid-row: 2; }
+  .mail .js-validate-error-label {
+    position: initial; } }
 
-@media (max-width: 420px) {
+@media (max-width: 576px) {
   .mail__form {
     grid-auto-rows: auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr); }
+    grid-template-columns: 1fr; }
   .mail__form-button {
     grid-column: unset;
     grid-row: unset; } }
