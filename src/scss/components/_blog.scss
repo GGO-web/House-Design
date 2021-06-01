@@ -21,7 +21,7 @@
       text-align: left;
    }
 
-   &__post {
+   &__posts-item {
       flex: 0 1 50%;
       padding: $blog-item-offset;
    }
@@ -46,7 +46,7 @@
    }
 
    @include mobileM {
-      &__post {
+      &__posts-item {
          flex: 0 1 100%;
       }
 

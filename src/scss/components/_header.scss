@@ -4,7 +4,10 @@
    right: 0;
    top: 0;
    z-index: 5;
-   transition: background-color 0.3s ease-in-out;
+
+   &__outer {
+      transition: background-color 0.5s ease-in-out;
+   }
 
    &__inner {
       display: flex;
@@ -38,8 +41,9 @@
       }
    }
 
-   &--background-active {
+   &--background-active &__outer {
       background-color: #fff;
+      transition: background-color 0.1s ease-in-out;
    }
 
    &--offset {
@@ -51,7 +55,7 @@
          position: fixed;
          left: 0;
          top: -100%;
-         z-index: -1;
+         z-index: -2;
          overflow: auto;
          width: 100%;
 

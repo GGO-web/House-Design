@@ -1,14 +1,13 @@
 .hero {
-   @include eclipse(#fff, 0.4);
-
    padding: $offset-small 0;
-   min-height: 100vh;
    color: var(--color-primary);
    background-image: url("../img/main-bg.jpg");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
    background-color: var(--color-white);
+
+   @include eclipse(#fff, 0.5);
 
    &__inner {
       @include responsive(padding-top, 200px, 120px, 1024px, 320px);
