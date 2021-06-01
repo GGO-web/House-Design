@@ -8,6 +8,7 @@
   --color-gray: #edf2f4; }
 
 html {
+  min-width: 280px;
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
@@ -366,8 +367,9 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 5;
-  transition: background-color 0.3s ease-in-out; }
+  z-index: 5; }
+  .header__outer {
+    transition: background-color 0.5s ease-in-out; }
   .header__inner {
     display: flex;
     align-items: center;
@@ -389,8 +391,9 @@ body {
     .header__list-link:hover, .header__list-link--active {
       -webkit-text-decoration: 2px underline var(--color-black);
       text-decoration: 2px underline var(--color-black); }
-  .header--background-active {
-    background-color: #fff; }
+  .header--background-active .header__outer {
+    background-color: #fff;
+    transition: background-color 0.1s ease-in-out; }
   .header--offset {
     padding-right: var(--scrollbar-width); }
   @media (max-width: 768px) {
@@ -398,7 +401,7 @@ body {
       position: fixed;
       left: 0;
       top: -100%;
-      z-index: -1;
+      z-index: -2;
       overflow: auto;
       width: 100%;
       height: calc(100vh - var(--header-height));
@@ -441,20 +444,19 @@ body {
     padding-right: var(--scrollbar-width); } }
 
 .hero {
-  position: relative;
-  z-index: 2;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #fff;
   padding: 32px 0;
-  min-height: 100vh;
   color: var(--color-primary);
   background-image: url("../img/main-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--color-white); }
+  background-color: var(--color-white);
+  position: relative;
+  z-index: 2;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #fff; }
   .hero::before {
     content: "";
     position: absolute;
@@ -463,7 +465,7 @@ body {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.4); }
+    background-color: rgba(255, 255, 255, 0.5); }
   @media (min-width: 1024px) {
     .hero__inner {
       padding-top: 200px; } }
@@ -822,7 +824,7 @@ body {
   margin: -15px;
   text-align: left; }
 
-.blog__post {
+.blog__posts-item {
   flex: 0 1 50%;
   padding: 15px; }
 
@@ -852,7 +854,7 @@ body {
     margin-top: 32px; } }
 
 @media (max-width: 576px) {
-  .blog__post {
+  .blog__posts-item {
     flex: 0 1 100%; } }
 
 @media (max-width: 576px) and (min-width: 576px) {
