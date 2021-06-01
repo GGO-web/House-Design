@@ -47,7 +47,8 @@
    }
 }
 
-.more-button {
+.show-more {
+   display: inline-block;
    font-size: $font-xx-small;
 
    &__arrow {

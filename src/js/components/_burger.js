@@ -6,6 +6,9 @@ function openBurgerMenu() {
    if (!window.pageYOffset)
       header.classList.toggle("header--background-active");
 
+   const headerHeight = header.offsetHeight - 1 + "px";
+   header.style.setProperty("--header-height", headerHeight);
+
    header.classList.add("header--offset");
    burger.classList.add("active");
    mainMenu.classList.add("is-active");

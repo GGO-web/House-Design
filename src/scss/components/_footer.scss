@@ -4,6 +4,7 @@
    &__inner {
       display: flex;
       flex-direction: column;
+      align-items: center;
 
       @include responsive(padding-top, $offset-x-middle, $offset-small, 1024px, 320px);
       @include responsive(padding-bottom, $offset-x-middle, $offset-small, 1024px, 320px);
@@ -38,13 +39,16 @@
    }
 
    &__social-link {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       height: 100%;
    }
 
    &__social-icon {
       width: 50%;
+      height: 50%;
       color: var(--color-white);
       transition: color 0.2s ease-in-out;
 

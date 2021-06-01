@@ -1,14 +1,9 @@
 .header {
-   $header-height: 80px;
-
    position: fixed;
    left: 0;
    right: 0;
    top: 0;
    z-index: 5;
-   height: $header-height;
-   min-height: 50px;
-   max-height: 80px;
    transition: background-color 0.3s ease-in-out;
 
    &__inner {
@@ -61,11 +56,11 @@
          width: 100%;
 
          // set the menu height to 100% of the window height(100vh) minus the header height(80px)
-         height: calc(100vh - #{$header-height});
+         height: calc(100vh - var(--header-height));
          transition: top 0.4s ease;
 
          &.is-active {
-            top: $header-height;
+            top: var(--header-height);
             padding-right: var(--scrollbar-width);
          }
       }
